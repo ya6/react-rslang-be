@@ -20,14 +20,14 @@ const refresh = async (userId, tokenId) => {
 };
 
 const getTokens = async userId => {
-  const token = jwt.sign({ id: userId }, JWT_SECRET_KEY, {
+  const token = jwt.sign({ id: userId }, ` ${JWT_SECRET_KEY}`, {
     expiresIn: JWT_EXPIRE_TIME
   });
 
   const tokenId = uuid();
   const refreshToken = jwt.sign(
     { id: userId, tokenId },
-    JWT_REFRESH_SECRET_KEY,
+    `${JWT_REFRESH_SECRET_KEY}`,
     {
       expiresIn: JWT_REFRESH_EXPIRE_TIME
     }

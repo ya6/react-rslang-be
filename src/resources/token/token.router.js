@@ -5,6 +5,7 @@ const tokenService = require('./token.service');
 
 router.get('/', async (req, res) => {
   const tokens = await tokenService.refresh(req.userId, req.tokenId);
+
   res.status(OK).send(tokens);
 });
 
