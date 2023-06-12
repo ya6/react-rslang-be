@@ -12,5 +12,5 @@ services:
       MONGO_CONNECTION_STRING: mongodb://mongodb:27017/learnwords
     networks:
       network1:
-        name: my-pre-existing-network
-        external: true
+        external:
+          name: rslang_be
