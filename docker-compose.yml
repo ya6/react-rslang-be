@@ -10,7 +10,7 @@ services:
     environment:
       PORT: 4000
       MONGO_CONNECTION_STRING: mongodb://mongodb:27017/learnwords
-  networks:
-    network1:
-      external:
-        name: rslang_be
+networks:
+  network1:
+    external:
+      name: rslang_be
