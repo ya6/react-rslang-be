@@ -11,5 +11,6 @@ services:
       PORT: 4000
       MONGO_CONNECTION_STRING: mongodb://mongodb:27017/learnwords
     networks:
-      name: rslang_be
-      external: true
+      network1:
+        name: rslang_be
+        external: true
