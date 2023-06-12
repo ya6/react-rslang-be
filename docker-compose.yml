@@ -9,8 +9,5 @@ services:
       - "4000:4000"
     environment:
       PORT: 4000
-      MONGO_CONNECTION_STRING: mongodb://mongodb:27017/learnwords
-networks:
-  network1:
-    external:
-      name: rslang_be
+      MONGO_CONNECTION_STRING:
+
